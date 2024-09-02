@@ -1,15 +1,15 @@
 echo "[+] Updating PEDA..."
-cd ~/peda
+cd ~/.peda
 git pull
 
 echo "[+] Updating PEDA-ARM..."
-cd ~/peda-arm
+cd ~/.peda-arm
 git pull
 
 echo "[+] Updating Pwndbg..."
-cd ~/pwndbg
+cd ~/.pwndbg
 git pull
 
 echo "[+] Updating GEF..."
-cd ~/gef
+cd ~/.gef
 git pull

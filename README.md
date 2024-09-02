@@ -12,15 +12,11 @@ gdb-pwndbg
 gdb-gef
 ```
 
-For more information read the relevant blog post:
-
-https://medium.com/bugbountywriteup/pwndbg-gef-peda-one-for-all-and-all-for-one-714d71bf36b8
-
 # Installation
 
 ```
-cd ~ && git clone https://github.com/apogiatzis/gdb-peda-pwndbg-gef.git
-cd ~/gdb-peda-pwndbg-gef
+cd ~ && git clone https://github.com/Tainted-Fool/gdb-aio.git
+cd ~/gdb-aio
 ./install.sh
 ```
 
