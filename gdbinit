@@ -22,6 +22,7 @@ end
 define init-pwndbg
 source ~/.pwndbg/gdbinit.py
 end
+set debuginfod enabled on
 document init-pwndbg
 Initializes PwnDBG
 end

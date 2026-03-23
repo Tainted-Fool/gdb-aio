@@ -44,7 +44,7 @@ if [ -d ~/.peda-arm ] || [ -h ~/.peda-arm ]; then
     fi
 else
     echo "[+] Downloading PEDA ARM..."
-    git clone https://github.com/alset0326/.peda-arm.git ~/.peda-arm
+    git clone https://github.com/alset0326/peda-arm.git ~/.peda-arm
 fi
 
 # download pwndbg
@@ -70,8 +70,20 @@ else
 fi
 
 # download gef
-echo "[+] Downloading GEF..."
-git clone https://github.com/hugsy/gef.git ~/.gef
+if [ -d ~/.gef ] || [ -h ~/.gef ]; then
+    echo "[-] GEF found"
+    read -p "skip download to continue? (enter 'y' or 'n') " skip_gef
+
+    if [ $skip_gef = 'n' ]; then
+        rm -rf ~/.gef
+        git clone https://github.com/hugsy/gef.git ~/.gef
+    else
+        echo "GEF skipped"
+    fi
+else
+    echo "[+] Downloading GEF..."
+    git clone https://github.com/hugsy/gef.git ~/.gef
+fi
 
 cd $installer_path
 
